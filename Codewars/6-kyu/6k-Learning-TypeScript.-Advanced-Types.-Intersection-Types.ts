@@ -1,5 +1,5 @@
 export function intersect<T extends Object, U extends Object>(first: T, second: U): T & U {
-  let result = <T & U>{};
+  const result = <T & U>{};
   for (const prop in first) {
     if (second.hasOwnProperty(prop)) {
       (<any>result)[prop] = first[prop];

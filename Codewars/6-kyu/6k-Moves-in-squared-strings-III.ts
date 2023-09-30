@@ -11,9 +11,8 @@ export function diag1Sym(strng: string): string {
 } // diag1Sym()
 
 export function selfieAndDiag1(strng: string): string {
-  const selfie = strng.split("\n");
   const diag1 = diag1Sym(strng).split("\n");
-  return selfie.map((e, i) => `${e}|${diag1[i]}`).join("\n");
+  return strng.split("\n").map((e, i) => `${e}|${diag1[i]}`).join("\n");
 } // selfieAndDiag1()
 
 export function oper(fct: (s: string) => string, s: string): string {

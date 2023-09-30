@@ -1,6 +1,6 @@
 export class SnakesLadders {
   board: {[i: number]: number} = {};
-  player: number[] = [];
+  player: number[];
   turn: number;
   
   constructor() {

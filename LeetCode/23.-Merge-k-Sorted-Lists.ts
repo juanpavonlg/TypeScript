@@ -10,7 +10,7 @@ class ListNode {
 function mergeKLists(lists: Array<ListNode | null>): ListNode | null {
   let head: ListNode | null = null;
   let tail: ListNode | null = null;
-  let node: ListNode | null = null;
+  let node: ListNode | null;
   do {
     node = null;
     let index = -1;

@@ -10,10 +10,10 @@ export function brainLuck(code: string, input: string) {
   // Run program
   while (ip < code.length) {
     switch (memory[ip]) {
-      case 62:
+      case 62: // >
         dp++;
         break;
-      case 60:
+      case 60: // <
         dp--;
         break;
       case 43: // +

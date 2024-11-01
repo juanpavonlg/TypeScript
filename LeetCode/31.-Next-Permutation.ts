@@ -1,24 +1,21 @@
 function nextPermutation(nums: number[]): void {
-  let unchanged = true;
   let l = nums.length - 2;
-  while (unchanged) {
-    const min = Number.MAX_SAFE_INTEGER;
-    let i = 0;
-    for (let r = l + 1; r < nums.length; r++) {
-      const diff = nums[r] - nums[l];
-      if (diff > 0 && diff < min) {
+  while (l >= 0) {
+    const next = l + 1;
+    let i = -1;
+    for (let r = next; r < nums.length; r++) {
+      if (nums[r] - nums[l] > 0) {
         i = r;
-        unchanged = false;
       }
     }
-    if (!unchanged) {
+    if (i >= 0) {
       [nums[l], nums[i]] = [nums[i], nums[l]];
-      nums.splice(l + 1, nums.length - l, ...nums.slice(l + 1).sort((a, b) => a - b));
+      nums.splice(next, nums.length - next, ...nums.slice(next).sort((a, b) => a - b));
+      break;
     }
     l--;
-    if (l < 0 && unchanged) {
+    if (l === -1) {
       nums.sort((a, b) => a - b);
-      unchanged = false;
     }
   }
 } // nextPermutation()

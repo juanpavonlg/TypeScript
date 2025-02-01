@@ -1,8 +1,6 @@
 function combinationSum2(candidates: number[], target: number): number[][] {
   const combs: number[][] = [];
   candidates.sort((a, b) => a - b);
-  console.log(candidates);
-  
 
   function findCombs(n: number, target: number, comb: number[]) {
     if (target === 0) {

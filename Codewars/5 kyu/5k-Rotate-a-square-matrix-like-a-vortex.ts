@@ -3,14 +3,14 @@ export function rotateLikeAVortex(matrix: number[][]): number[][] {
   const rings = Math.floor(m.length / 2);
   let ring = 0;
   while (ring < rings) {
+    const last = m.length - 1 - ring;
+    const cs = ring;
+    const rs = last;
+    const cf = last;
+    const rf = ring;
+    const lim = last - ring;
     let step = 0;
     while (step <= ring) {
-      const last = m.length - 1 - ring;
-      let cs = ring;
-      let rs = last;
-      let cf = last;
-      let rf = ring;
-      const lim = last - ring;
       for (let i = 0; i < lim; i++) {
         [m[ring][cs + i], m[rs - i][ring], m[last][cf - i], m[rf + i][last]] = [m[rf + i][last], m[ring][cs + i], m[rs - i][ring], m[last][cf - i]];
       }

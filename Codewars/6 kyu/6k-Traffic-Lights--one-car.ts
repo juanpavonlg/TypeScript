@@ -7,7 +7,7 @@ export function trafficLights(road: string, n: number): string[] {
       lights[i] = { color: road[i], time: time[road[i]] };
     }
   }
-  const ans= [road];
+  const ans = [road];
   const state = road.split("");
   let car = road.indexOf("C");
   while (n--) {

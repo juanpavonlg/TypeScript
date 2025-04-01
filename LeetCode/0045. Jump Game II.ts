@@ -11,6 +11,7 @@ function jump(nums: number[]): number {
     jumps++;
   }
   return jumps;
+  // Para 55. Jump Game:
   // if (nums.length <= 1) {
   //   return 0;
   // }

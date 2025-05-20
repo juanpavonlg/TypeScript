@@ -67,6 +67,6 @@ n11 = null;
 n21 = null;
 r1 = mergeTwoLists(n11, n21);
 console.log(r1);
-n21 = new ListNode(0);
+n21 = new ListNode();
 r1 = mergeTwoLists(n11, n21);
 console.log(r1);

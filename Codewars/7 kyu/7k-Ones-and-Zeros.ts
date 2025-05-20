@@ -1,5 +1,5 @@
 export function binaryArrayToNumber(arr: number[]): number {
   return parseInt(arr.join(""), 2);
-}; // binaryArrayToNumber()
+} // binaryArrayToNumber()
 
-console.log(binaryArrayToNumber([0,1,1,0]));
+console.log(binaryArrayToNumber([0, 1, 1, 0]));

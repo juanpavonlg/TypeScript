@@ -21,7 +21,7 @@ function addTwoNumbers(l1: ListNode | null, l2: ListNode | null): ListNode | nul
       tail = node;
     } else {
       head = node;
-      tail = head;
+      tail = node;
     }
     l1 = l1?.next ?? null;
     l2 = l2?.next ?? null;
@@ -39,14 +39,14 @@ console.log(addTwoNumbers(l11, l21));
 l11 = new ListNode();
 l21 = new ListNode();
 console.log(addTwoNumbers(l11, l21));
-let l17 = new ListNode(9);
-let l16 = new ListNode(9, l17);
-let l15 = new ListNode(9, l16);
-let l14 = new ListNode(9, l15);
+const l17 = new ListNode(9);
+const l16 = new ListNode(9, l17);
+const l15 = new ListNode(9, l16);
+const l14 = new ListNode(9, l15);
 l13 = new ListNode(9, l14);
 l12 = new ListNode(9, l13);
 l11 = new ListNode(9, l12);
-let l24 = new ListNode(9);
+const l24 = new ListNode(9);
 l23 = new ListNode(9, l24);
 l22 = new ListNode(9, l23);
 l21 = new ListNode(9, l22);

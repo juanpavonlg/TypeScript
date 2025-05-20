@@ -1,5 +1,5 @@
 function lengthOfLongestSubstring(s: string): number {
-  const substr: {[key: string]: number} = {};
+  const substr: { [key: string]: number } = {};
   let max = 0;
   let l = 0;
   for (let r = 0; r < s.length; r++) {

@@ -15,8 +15,8 @@ function removeNthFromEnd(head: ListNode | null, n: number): ListNode | null {
     pointer = pointer.next;
     count++;
   }
-  let i = 1;
   pointer = head;
+  let i = 1;
   while (i < count - n) {
     pointer = pointer?.next ?? null;
     i++;

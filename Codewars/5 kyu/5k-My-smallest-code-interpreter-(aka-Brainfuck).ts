@@ -27,7 +27,7 @@ export function brainLuck(code: string, input: string) {
         break;
       case 44: // ,
         memory[dp] = input.charCodeAt(0);
-        input = [...input].splice(1).join("");
+        input = input.slice(1);
         break;
       case 91: // [
         if (memory[dp] === 0) {

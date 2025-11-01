@@ -1,5 +1,5 @@
 export function translate(speech: string, vocabulary: string[]): string {  
-  for (const word of speech.match(/[\w*]+/g) || []) {
+  for (const word of speech.match(/[\w*]+/g) ?? []) {
     for (const option of vocabulary) {
       if (new RegExp(`^${word.replace(/\*/g, ".")}$`).test(option)) {
         speech = speech.replace(word, option);

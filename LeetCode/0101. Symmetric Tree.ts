@@ -22,7 +22,7 @@ function isSymmetric(root: TreeNode | null): boolean {
       return false;
     }
     return isSame(left.left, right.right) && isSame(left.right, right.left);
-  } // isSame
+  } // isSame()
 
   return isSame(root, root);
 } // isSymmetric()

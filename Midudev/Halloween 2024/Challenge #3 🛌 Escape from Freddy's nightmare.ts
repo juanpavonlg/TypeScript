@@ -8,7 +8,7 @@ function findSafestPath(dream: number[][]): number {
 
   function isValid(row: number, col: number): boolean {
     return row <= N && col <= M;
-  }
+  } // isValid()
 
   function backtrack(row: number, col: number) {
     if (row === N && col === M) {
@@ -24,7 +24,7 @@ function findSafestPath(dream: number[][]): number {
         sum -= dream[newRow][newCol];
       }
     }
-  }
+  } // backtrack()
 
   backtrack(0, 0);
   return min;

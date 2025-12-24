@@ -22,7 +22,7 @@ function escapePyramidHead(room: string[][]): number {
 
   function isValid(row: number, col: number): boolean {
     return row >= 0 && col >= 0 && row < room.length && col < room.length && room[row][col] !== "#";
-  }
+  } // isValid()
 
   function backtrack(row: number, col: number) {
     if (row === you.row && col === you.col) {
@@ -40,7 +40,7 @@ function escapePyramidHead(room: string[][]): number {
       }
     }
     room[row][col] = ".";
-  }
+  } // backtrack()
 
   backtrack(pyr.row, pyr.col);
   return min < Number.MAX_VALUE ? min: -1;

@@ -1,27 +1,28 @@
 function generateParenthesis(n: number): string[] {
   const parenthesis: string[] = [];
+  const sol: string[] = [];
 
-  function getCombinations(open: number, close: number, sol: string) {
-    console.log(open, close, sol);
-    
+  function getCombinations(open: number, close: number) {
     if (sol.length === 2 * n) {
-      parenthesis.push(sol);
+      parenthesis.push(sol.join(""));
       return;
     }
     if (open < n) {
-      getCombinations(open + 1, close, sol + "(");
-      console.log("1.", open, close, sol);
+      sol.push("(")
+      getCombinations(open + 1, close);
+      sol.pop()
     }
     if (close < open) {
-      getCombinations(open, close + 1, sol + ")");
-      console.log("2.", open, close, sol);
+      sol.push(")")
+      getCombinations(open, close + 1);
+      sol.pop()
     }
-  }
+  } // getCombinations()
 
-  getCombinations(0, 0, "");
+  getCombinations(0, 0);
   return parenthesis;
 } // generateParenthesis()
 
-// console.log(generateParenthesis(3));
+console.log(generateParenthesis(3));
 console.log(generateParenthesis(1));
 console.log(generateParenthesis(2));

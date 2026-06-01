@@ -4,7 +4,7 @@ export const part = (n: number): string => {
   const sol: number[] = [];
 
   function getParts(i: number) {
-    const sum = sol.reduce((a, b) => a + b, 0);
+    const sum = sol.reduce((a, e) => a + e, 0);
     if (sum === n) {
       parts.push([...sol]);
       return;
@@ -16,7 +16,7 @@ export const part = (n: number): string => {
     sol.push(digits[i]);
     getParts(i);
     sol.pop();
-  }
+  } // getParts()
 
   getParts(0);
   const prods = [...new Set(parts.map((x) => x.reduce((a, e) => a * e)))].sort((a, b) => a - b);

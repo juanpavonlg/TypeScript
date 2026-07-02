@@ -30,7 +30,7 @@ function canExit(maze: string[][]) {
 
   let row = 0;
   let col = -1;
-  for (; row < maze.length; row++) {
+  for (; row < M; row++) {
     col = maze[row].indexOf("S");
     if (col >= 0) {
       break;
